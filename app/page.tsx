@@ -12,8 +12,7 @@ import CategorySection from "@/components/category-section";
 import SplitImageSection from "@/components/splitImage-section";
 import ShopByCollectionSection from "@/components/shop-by-collection";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
-import footer from "@/components/footer";
-import { Footer } from "react-day-picker";
+import Footer from "@/components/footer";
 
 export default function Home() {
   // Initialize Lenis smooth scrolling
