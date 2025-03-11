@@ -10,6 +10,7 @@ import HeroSection from "@/components/hero-section";
 import Header from "@/components/header";
 import CategorySection from "@/components/category-section";
 import SplitImageSection from "@/components/splitImage-section";
+import ShopByCollectionSection from "@/components/shop-by-collection";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
 
 export default function Home() {
@@ -44,6 +45,9 @@ export default function Home() {
           leftImage={splitImages.leftImage}
           rightImage={splitImages.rightImage}
         />
+
+        {/* Gender Category Section with Rounded Cards */}
+        <ShopByCollectionSection />
 
         <section className="py-8 md:py-12">
           <div className="container px-4 md:px-6">
