@@ -61,7 +61,7 @@ export default function HeroSection() {
               fontWeight: 300,
             }}
           >
-            quarto
+            Quarto
           </h1>
         </div>
 

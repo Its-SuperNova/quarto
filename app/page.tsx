@@ -1,20 +1,33 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { ChevronRight } from "lucide-react"
+import Link from "next/link";
+import { ChevronRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import ProductCard from "@/components/product-card"
-import CategoryButton from "@/components/category-button"
-import { ScrollArea, ScrollBar } from "@/components/ui/scroll-area"
-import HeroSection from "@/components/hero-section"
-import Header from "@/components/header"
-import { useSmoothScroll } from "@/lib/smooth-scroll"
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import ProductCard from "@/components/product-card";
+import HeroSection from "@/components/hero-section";
+import Header from "@/components/header";
+import CategorySection from "@/components/category-section";
+import { useSmoothScroll } from "@/lib/smooth-scroll";
 
 export default function Home() {
   // Initialize Lenis smooth scrolling
-  useSmoothScroll()
+  useSmoothScroll();
+
+  // Define the images for the split image section
+  const splitImages = {
+    leftImage: {
+      src: "/cream-outfit-back.png",
+      alt: "Cream colored sweatshirt and shorts - back view",
+      href: "/category/summer-collection",
+    },
+    rightImage: {
+      src: "/blue-racing-outfit-side.png",
+      alt: "Blue racing sweatshirt with gray sweatpants - side view",
+      href: "/category/streetwear-collection",
+    },
+  };
 
   return (
     <div className="flex min-h-screen flex-col">
@@ -22,43 +35,16 @@ export default function Home() {
       <main className="flex-1">
         <HeroSection />
 
-        <section className="py-8 md:py-12">
-          <div className="container px-4 md:px-6">
-            <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-medium tracking-tight">Shop by Category</h2>
-              <Link
-                href="/categories"
-                className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
-              >
-                View All
-                <ChevronRight className="ml-1 h-4 w-4" />
-              </Link>
-            </div>
-            <ScrollArea className="w-full whitespace-nowrap py-6">
-              <div className="flex w-max space-x-4 px-4">
-                <CategoryButton name="T-Shirts" href="/category/t-shirts" image="/images/t-shirt-category.png" />
-                <CategoryButton
-                  name="Sweatshirts"
-                  href="/category/sweatshirts"
-                  image="/images/sweatshirt-category.png"
-                />
-                <CategoryButton name="Hoodies" href="/category/hoodies" image="/images/hoodie-category.png" />
-                <CategoryButton
-                  name="Graphic Tees"
-                  href="/category/graphic-tees"
-                  image="/images/graphic-tee-category.png"
-                />
-                <CategoryButton name="Basics" href="/category/basics" image="/images/basic-tee-category.png" />
-              </div>
-              <ScrollBar orientation="horizontal" />
-            </ScrollArea>
-          </div>
-        </section>
+        {/* Category Section Component */}
+        <CategorySection />
+
 
         <section className="py-8 md:py-12">
           <div className="container px-4 md:px-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-medium tracking-tight">New Arrivals</h2>
+              <h2 className="text-2xl font-medium tracking-tight">
+                New Arrivals
+              </h2>
               <Link
                 href="/category/new-arrivals"
                 className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
@@ -103,7 +89,9 @@ export default function Home() {
         <section className="py-8 md:py-12">
           <div className="container px-4 md:px-6">
             <div className="flex items-center justify-between">
-              <h2 className="text-2xl font-medium tracking-tight">Trending Now</h2>
+              <h2 className="text-2xl font-medium tracking-tight">
+                Trending Now
+              </h2>
               <Link
                 href="/category/trending"
                 className="flex items-center text-sm font-medium text-muted-foreground hover:text-primary"
@@ -150,7 +138,9 @@ export default function Home() {
             <div className="grid gap-6 lg:grid-cols-2 lg:gap-12 xl:grid-cols-3">
               <div className="flex flex-col justify-center space-y-4">
                 <div className="space-y-2">
-                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Why Choose Threadly</h2>
+                  <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                    Why Choose Threadly
+                  </h2>
                   <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                     We believe in quality, sustainability, and timeless design.
                   </p>
@@ -168,7 +158,8 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-bold">Premium Quality</h3>
                     <p className="text-muted-foreground">
-                      We source the finest materials to ensure our clothing lasts for years to come.
+                      We source the finest materials to ensure our clothing
+                      lasts for years to come.
                     </p>
                   </div>
                 </div>
@@ -176,7 +167,8 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-bold">Sustainable Practices</h3>
                     <p className="text-muted-foreground">
-                      Our commitment to the environment is reflected in our production processes.
+                      Our commitment to the environment is reflected in our
+                      production processes.
                     </p>
                   </div>
                 </div>
@@ -184,7 +176,8 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-bold">Timeless Design</h3>
                     <p className="text-muted-foreground">
-                      Our designs transcend trends, focusing on pieces that remain stylish season after season.
+                      Our designs transcend trends, focusing on pieces that
+                      remain stylish season after season.
                     </p>
                   </div>
                 </div>
@@ -192,7 +185,8 @@ export default function Home() {
                   <div className="flex flex-col gap-2">
                     <h3 className="text-xl font-bold">Ethical Production</h3>
                     <p className="text-muted-foreground">
-                      We ensure fair wages and safe working conditions throughout our supply chain.
+                      We ensure fair wages and safe working conditions
+                      throughout our supply chain.
                     </p>
                   </div>
                 </div>
@@ -205,7 +199,9 @@ export default function Home() {
           <div className="container px-4 md:px-6">
             <div className="flex flex-col items-center justify-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">Join Our Newsletter</h2>
+                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                  Join Our Newsletter
+                </h2>
                 <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Stay updated with our latest collections and exclusive offers.
                 </p>
@@ -223,7 +219,8 @@ export default function Home() {
                   </Button>
                 </form>
                 <p className="text-xs text-muted-foreground">
-                  By subscribing, you agree to our Terms of Service and Privacy Policy.
+                  By subscribing, you agree to our Terms of Service and Privacy
+                  Policy.
                 </p>
               </div>
             </div>
@@ -242,7 +239,10 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/category/sweatshirts" className="hover:underline">
+                  <Link
+                    href="/category/sweatshirts"
+                    className="hover:underline"
+                  >
                     Sweatshirts
                   </Link>
                 </li>
@@ -252,7 +252,10 @@ export default function Home() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/category/new-arrivals" className="hover:underline">
+                  <Link
+                    href="/category/new-arrivals"
+                    className="hover:underline"
+                  >
                     New Arrivals
                   </Link>
                 </li>
@@ -336,7 +339,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex justify-center gap-4 md:justify-end">
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-foreground"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -353,7 +359,10 @@ export default function Home() {
                 </svg>
                 <span className="sr-only">Facebook</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-foreground"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -372,7 +381,10 @@ export default function Home() {
                 </svg>
                 <span className="sr-only">Instagram</span>
               </Link>
-              <Link href="#" className="text-muted-foreground hover:text-foreground">
+              <Link
+                href="#"
+                className="text-muted-foreground hover:text-foreground"
+              >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -394,5 +406,5 @@ export default function Home() {
         </div>
       </footer>
     </div>
-  )
+  );
 }
