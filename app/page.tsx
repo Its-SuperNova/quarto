@@ -16,49 +16,18 @@ export default function Home() {
   // Define the images for the split image section
   const splitImages = {
     leftImage: {
-      src: "/cream-outfit-back.png",
+      src: "images/home/shorts.png",
       alt: "Cream colored sweatshirt and shorts - back view",
       href: "/category/summer-collection",
     },
     rightImage: {
-      src: "/blue-racing-outfit-side.png",
+      src: "images/home/blue-racing-outfit-side.png",
       alt: "Blue racing sweatshirt with gray sweatpants - side view",
       href: "/category/streetwear-collection",
     },
   };
 
-  // Trending products data
-  const trendingProducts = [
-    {
-      id: "5",
-      name: "Heavyweight Hoodie",
-      price: 79.99,
-      image: "/images/heavyweight-hoodie.png",
-      category: "Hoodies",
-    },
-    {
-      id: "6",
-      name: "Vintage Wash T-Shirt",
-      price: 42.99,
-      image: "/images/vintage-tshirt.png",
-      category: "T-Shirts",
-    },
-    {
-      id: "7",
-      name: "Relaxed Fit Sweatshirt",
-      price: 64.99,
-      image: "/images/relaxed-sweatshirt.png",
-      category: "Sweatshirts",
-    },
-    {
-      id: "8",
-      name: "Minimalist Logo T-Shirt",
-      price: 38.99,
-      image: "/images/logo-tshirt.png",
-      category: "T-Shirts",
-    },
-  ];
-
+  
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
