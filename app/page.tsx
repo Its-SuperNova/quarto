@@ -9,6 +9,7 @@ import ProductCard from "@/components/product-card";
 import HeroSection from "@/components/hero-section";
 import Header from "@/components/header";
 import CategorySection from "@/components/category-section";
+import SplitImageSection from "@/components/splitImage-section";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
 
 export default function Home() {
@@ -18,12 +19,12 @@ export default function Home() {
   // Define the images for the split image section
   const splitImages = {
     leftImage: {
-      src: "/cream-outfit-back.png",
+      src: "/images/home/shorts.png",
       alt: "Cream colored sweatshirt and shorts - back view",
       href: "/category/summer-collection",
     },
     rightImage: {
-      src: "/blue-racing-outfit-side.png",
+      src: "/images/home/blue-racing-outfit-side.png",
       alt: "Blue racing sweatshirt with gray sweatpants - side view",
       href: "/category/streetwear-collection",
     },
@@ -38,6 +39,11 @@ export default function Home() {
         {/* Category Section Component */}
         <CategorySection />
 
+        {/* Split Image Section Component */}
+        <SplitImageSection
+          leftImage={splitImages.leftImage}
+          rightImage={splitImages.rightImage}
+        />
 
         <section className="py-8 md:py-12">
           <div className="container px-4 md:px-6">
