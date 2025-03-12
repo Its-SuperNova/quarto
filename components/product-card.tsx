@@ -3,6 +3,7 @@ import Image from "next/image";
 
 interface ProductCardProps {
   id: string;
+  slug?: string;
   name: string;
   price: number;
   originalPrice?: number;
@@ -13,8 +14,19 @@ interface ProductCardProps {
   objectPosition?: string;
 }
 
+// Helper function to create URL-friendly slug from product name
+function createSlug(name: string): string {
+  return name
+    .toLowerCase()
+    .replace(/[^a-z0-9\s-]/g, "") // Remove special characters
+    .replace(/\s+/g, "-") // Replace spaces with hyphens
+    .replace(/-+/g, "-") // Replace multiple hyphens with single hyphen
+    .trim();
+}
+
 export default function ProductCard({
   id,
+  slug,
   name,
   price,
   originalPrice,
@@ -24,9 +36,12 @@ export default function ProductCard({
   style = "default",
   objectPosition = "center",
 }: ProductCardProps) {
+  // Use provided slug or create one from the name
+  const productSlug = slug || createSlug(name);
+
   if (style === "category") {
     return (
-      <Link href={`/product/${id}`} className="group block">
+      <Link href={`/product/${productSlug}`} className="group block">
         <div className="relative overflow-hidden rounded-2xl">
           <Image
             src={image || "/placeholder.svg"}
@@ -56,7 +71,7 @@ export default function ProductCard({
 
   return (
     <div className="group">
-      <Link href={`/product/${id}`} className="block">
+      <Link href={`/product/${productSlug}`} className="block">
         <div className="overflow-hidden">
           <Image
             src={image || "/placeholder.svg"}
