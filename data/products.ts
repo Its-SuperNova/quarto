@@ -232,6 +232,40 @@ export const allProducts = {
       ],
     },
   },
+  "navy-double-breasted-blazer": {
+    id: "27",
+    slug: "navy-double-breasted-blazer",
+    name: "Navy Double-Breasted Blazer",
+    price: 299.99,
+    category: "Men Fashion",
+    description:
+      "Sophisticated navy double-breasted blazer crafted from premium wool. A timeless piece that elevates any formal or business casual ensemble.",
+    details:
+      "Classic double-breasted blazer in navy wool fabric. Features peak lapels, gold-tone buttons, two front flap pockets, and a single vent. Fully lined interior with a structured shoulder for a sharp silhouette. Perfect for formal occasions or business attire.",
+    fit: "Tailored fit. Model is 6'1\" and wears size M.",
+    material: "Shell: 100% Wool, Lining: 100% Polyester",
+    care: "Dry clean only. Do not machine wash or tumble dry.",
+    images: [
+      "/images/cloths/new-arrivals/Navy-Double-Breasted-Blazer/1.png",
+      "/images/cloths/new-arrivals/Navy-Double-Breasted-Blazer/2.png",
+      "/images/cloths/new-arrivals/Navy-Double-Breasted-Blazer/3.png",
+      "/images/cloths/new-arrivals/Navy-Double-Breasted-Blazer/4.png",
+      "/images/cloths/new-arrivals/Navy-Double-Breasted-Blazer/5.png",
+    ],
+    colors: ["Navy", "Charcoal", "Black"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    reviews: {
+      average: 4.9,
+      count: 156,
+      distribution: [
+        { rating: 5, percentage: 85 },
+        { rating: 4, percentage: 12 },
+        { rating: 3, percentage: 2 },
+        { rating: 2, percentage: 0.5 },
+        { rating: 1, percentage: 0.5 },
+      ],
+    },
+  },
 };
 
 export const relatedProducts = [
