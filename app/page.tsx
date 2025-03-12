@@ -8,7 +8,7 @@ import ShopByCollectionSection from "@/components/shop-by-collection";
 import NewArrivalsSection from "@/components/new-arraivals-section";
 import Footer from "@/components/footer";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
-
+import VideoShowcaseSection from "@/components/video-showcase-section";
 export default function Home() {
   // Initialize Lenis smooth scrolling
   useSmoothScroll();
@@ -26,8 +26,15 @@ export default function Home() {
       href: "/category/streetwear-collection",
     },
   };
+  // Video showcase content
+  const videoShowcase = {
+    videoSrc: "/videos/polo-tshirt.webm",
+    title: "Knitted Polo Shirts",
+    subtitle: "Summer Season",
+    ctaText: "Shop Now",
+    ctaLink: "/category/polo-shirts",
+  };
 
-  
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
@@ -40,6 +47,13 @@ export default function Home() {
         />
         <ShopByCollectionSection />
         <NewArrivalsSection />
+        <VideoShowcaseSection
+          videoSrc={videoShowcase.videoSrc}
+          title={videoShowcase.title}
+          subtitle={videoShowcase.subtitle}
+          ctaText={videoShowcase.ctaText}
+          ctaLink={videoShowcase.ctaLink}
+        />
       </main>
 
       <Footer />
