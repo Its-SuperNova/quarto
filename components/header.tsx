@@ -1,57 +1,87 @@
-import Link from "next/link"
-import Image from "next/image"
-import { Search, ShoppingBag, User } from "lucide-react"
+"use client";
 
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+import Link from "next/link";
+import Image from "next/image";
+import { Search, ShoppingBag } from "lucide-react";
+import { useState } from "react";
+
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 
 export default function Header() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const toggleSearch = () => {
+    setIsSearchOpen(!isSearchOpen);
+  };
+
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
         <div className="flex w-full justify-between items-center">
-          {/* Logo on the left */}
-          <Link href="/" className="flex items-center">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-Fqm2HsL40J1ikvZ8EXJRcJfoCrrfl6.svg"
-              alt="Threadly Logo"
-              width={120}
-              height={30}
-              className="h-8 w-auto"
-            />
-          </Link>
+          {/* Navigation and search on the left */}
+          <div className="flex items-center gap-8">
+            <nav className="flex gap-8">
+              <Link
+                href="/category/men"
+                className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary"
+              >
+                Men
+              </Link>
+              <Link
+                href="/category/women"
+                className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary"
+              >
+                Women
+              </Link>
+              <Link
+                href="/category/kids"
+                className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary"
+              >
+                Kids
+              </Link>
+            </nav>
 
-          {/* Navigation in the center */}
-          <nav className="absolute left-1/2 transform -translate-x-1/2 hidden md:flex gap-8">
-            <Link href="/category/t-shirts" className="text-sm font-medium transition-colors hover:text-primary">
-              T-Shirts
-            </Link>
-            <Link href="/category/sweatshirts" className="text-sm font-medium transition-colors hover:text-primary">
-              Sweatshirts
-            </Link>
-            <Link href="/category/hoodies" className="text-sm font-medium transition-colors hover:text-primary">
-              Hoodies
-            </Link>
-            <Link href="/category/new-arrivals" className="text-sm font-medium transition-colors hover:text-primary">
-              New Arrivals
-            </Link>
-          </nav>
-
-          {/* Search and icons on the right */}
-          <div className="flex items-center gap-4">
-            <div className="relative w-full max-w-sm items-center hidden md:flex">
-              <Search className="absolute left-2.5 h-4 w-4 text-muted-foreground" />
-              <Input
-                type="search"
-                placeholder="Search products..."
-                className="w-full rounded-full bg-background pl-8 md:w-[200px] lg:w-[250px]"
+            {/* Search icon and input */}
+            <div className="flex items-center">
+              <Search
+                className="h-5 w-5 cursor-pointer"
+                onClick={toggleSearch}
               />
+              {isSearchOpen && (
+                <div className="ml-2">
+                  <Input
+                    type="search"
+                    placeholder="Enter Search"
+                    className="w-[200px] border-0 border-b border-muted-foreground rounded-none focus-visible:ring-0 focus-visible:outline-none focus:outline-none active:outline-none"
+                    autoFocus
+                    style={{ boxShadow: "none" }}
+                  />
+                </div>
+              )}
             </div>
-            <Link href="/account">
-              <Button variant="ghost" size="icon" className="rounded-full">
-                <User className="h-5 w-5" />
-                <span className="sr-only">Account</span>
-              </Button>
+          </div>
+
+          {/* Logo in the center */}
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/logo-Fqm2HsL40J1ikvZ8EXJRcJfoCrrfl6.svg"
+                alt="Threadly Logo"
+                width={120}
+                height={30}
+                className="h-8 w-auto"
+              />
+            </Link>
+          </div>
+
+          {/* Account and cart on the right */}
+          <div className="flex items-center gap-4">
+            <Link
+              href="/account"
+              className="text-sm font-medium uppercase tracking-wide transition-colors hover:text-primary"
+            >
+              Log In
             </Link>
             <Link href="/cart">
               <Button variant="ghost" size="icon" className="rounded-full">
@@ -63,5 +93,5 @@ export default function Header() {
         </div>
       </div>
     </header>
-  )
+  );
 }
