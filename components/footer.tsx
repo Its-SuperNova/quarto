@@ -10,8 +10,8 @@ import {
 
 export default function Footer() {
   return (
-    <footer className="text-white" style={{ backgroundColor: "#111111" }}>
-      <div className="container px-4 md:p-6">
+    <footer className="text-white flex justify-center" style={{ backgroundColor: "#111111" }}>
+      <div className="px-4 md:p-6 w-full max-w-[1200px]">
         <div className="grid gap-8 py-16 md:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <h3 className="text-lg font-medium text-white">Shop</h3>
@@ -279,25 +279,43 @@ export default function Footer() {
                 © Copyright {new Date().getFullYear()}. All Rights Reserved.
               </p>
             </div>
-            <div className="flex justify-center gap-6 mt-4 md:mt-0">
-              <Link
-                href="/privacy"
-                className="text-sm text-zinc-400 hover:text-white"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-sm text-zinc-400 hover:text-white"
-              >
-                Terms & Conditions
-              </Link>
-              <Link
-                href="/cookies"
-                className="text-sm text-zinc-400 hover:text-white"
-              >
-                Cookie Policy
-              </Link>
+            <div className="flex items-center justify-center gap-4 mt-4 md:mt-0">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-epCI13rKkMAIXPe6TiPhJCMRF9Olpn.png"
+                alt="Mastercard"
+                width={60}
+                height={40}
+                className="h-8 w-auto bg-white rounded-sm p-1"
+              />
+              
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cCXWDEfXhuWx7exrzdGeZprJMnocSS.png"
+                alt="UPI"
+                width={60}
+                height={40}
+                className="h-8 w-auto bg-white rounded-sm p-1"
+              />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-CvbJAXLxIVUOX2dO8q1p3Tqd3r4KxF.png"
+                alt="Apple Pay"
+                width={60}
+                height={40}
+                className="h-8 w-auto bg-white rounded-sm p-1"
+              />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-F206EDcI9azti1aTNpxc0bGgPc7qag.png"
+                alt="Google Pay"
+                width={60}
+                height={40}
+                className="h-8 w-auto bg-white rounded-sm p-1"
+              />
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-DiYkEEqEtMUfoYNsEVn0kpEGERhT1V.png"
+                alt="PayPal"
+                width={60}
+                height={40}
+                className="h-8 w-auto bg-white rounded-sm p-1"
+              />
             </div>
           </div>
         </div>
