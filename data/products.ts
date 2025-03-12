@@ -198,6 +198,40 @@ export const allProducts = {
       ],
     },
   },
+  "leaf-pattern-resort-shirt": {
+    id: "26",
+    slug: "leaf-pattern-resort-shirt",
+    name: "Leaf Pattern Resort Shirt",
+    price: 89.99,
+    category: "Men Fashion",
+    description:
+      "Elegant resort shirt featuring a tropical leaf pattern. Perfect for vacation wear or summer occasions, combining comfort with sophisticated style.",
+    details:
+      "Lightweight resort shirt in premium cotton fabric with a distinctive leaf pattern print. Features a classic button-down collar, short sleeves, and a relaxed fit. The breathable fabric and comfortable cut make it ideal for warm weather.",
+    fit: "Relaxed fit. Model is 6'1\" and wears size M.",
+    material: "100% Premium Cotton",
+    care: "Machine wash cold. Tumble dry low. Iron on medium heat if needed.",
+    images: [
+      "/images/cloths/new-arrivals/Leaf-Pattern-Resort-Shirt/1.png",
+      "/images/cloths/new-arrivals/Leaf-Pattern-Resort-Shirt/2.png",
+      "/images/cloths/new-arrivals/Leaf-Pattern-Resort-Shirt/3.png",
+      "/images/cloths/new-arrivals/Leaf-Pattern-Resort-Shirt/4.png",
+      "/images/cloths/new-arrivals/Leaf-Pattern-Resort-Shirt/5.png",
+    ],
+    colors: ["White/Green", "Blue/White", "Black/White"],
+    sizes: ["S", "M", "L", "XL", "XXL"],
+    reviews: {
+      average: 4.6,
+      count: 87,
+      distribution: [
+        { rating: 5, percentage: 70 },
+        { rating: 4, percentage: 22 },
+        { rating: 3, percentage: 5 },
+        { rating: 2, percentage: 2 },
+        { rating: 1, percentage: 1 },
+      ],
+    },
+  },
 };
 
 export const relatedProducts = [
