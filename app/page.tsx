@@ -9,6 +9,7 @@ import NewArrivalsSection from "@/components/new-arraivals-section";
 import Footer from "@/components/footer";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
 import VideoShowcaseSection from "@/components/video-showcase-section";
+import TrendingNowSection from "@/components/trending-now-section";
 export default function Home() {
   // Initialize Lenis smooth scrolling
   useSmoothScroll();
@@ -54,6 +55,7 @@ export default function Home() {
           ctaText={videoShowcase.ctaText}
           ctaLink={videoShowcase.ctaLink}
         />
+        <TrendingNowSection />
       </main>
 
       <Footer />
