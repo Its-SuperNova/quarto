@@ -66,6 +66,41 @@ export const allProducts = {
       ],
     },
   },
+  "High-waisted-Curved-Denim-Shorts": {
+    id: "29",
+    slug: "high-waisted-curved-denim-shorts",
+    name: "High-waisted Curved Denim Shorts",
+    price: 45.99,
+    category: "Women Fashion",
+    description:
+      "Stylish high-waisted denim shorts with a flattering curved hem. Perfect for creating versatile summer outfits with a modern, feminine silhouette.",
+    details:
+      "Premium denim shorts featuring a high-waisted design and curved hem for a flattering fit. The shorts are crafted from soft, stretchy denim that provides both comfort and durability. Features include front and back pockets, a curved hemline that elongates the legs, and a comfortable stretch waistband. The versatile length makes them perfect for both casual and dressier summer occasions.",
+    fit: "High-waisted fit with curved hem. Model is 5'8\" and wears size M for a flattering silhouette.",
+    material:
+      "98% Cotton, 2% Elastane - Soft, stretchy denim with excellent recovery",
+    care: "Machine wash cold with similar colors. Tumble dry low. Do not bleach. Iron on low heat if needed.",
+    images: [
+      "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/1.png",
+      "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/2.png",
+      "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/3.png",
+      "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/4.png",
+      "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/5.png",
+    ],
+    colors: ["Light Wash", "Medium Wash", "Dark Wash", "Black"],
+    sizes: ["XS", "S", "M", "L", "XL"],
+    reviews: {
+      average: 4.7,
+      count: 156,
+      distribution: [
+        { rating: 5, percentage: 75 },
+        { rating: 4, percentage: 18 },
+        { rating: 3, percentage: 4 },
+        { rating: 2, percentage: 2 },
+        { rating: 1, percentage: 1 },
+      ],
+    },
+  },
   "striped-rugby-shirt": {
     id: "23",
     slug: "striped-rugby-shirt",

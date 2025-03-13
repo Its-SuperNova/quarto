@@ -9,11 +9,11 @@ export const newArrivalsProducts = [
   },
   {
     id: "22",
-    slug: "cmxii-elite-race-hoodie",
-    name: "CMXII Elite Race Hoodie",
+    slug: "High-waisted-Curved-Denim-Shorts",
+    name: "High-waisted Curved Denim Shorts",
     price: 79.99,
-    image: "/images/cloths/new-arrivals/CMXII-Elite-Race-Hoodie/image.png",
-    category: "Hoodies",
+    image: "/images/cloths/new-arrivals/High-waisted-Curved-Denim-Shorts/image.png",
+    category: "Shorts",
   },
   {
     id: "23",
