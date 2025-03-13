@@ -9,10 +9,10 @@ export const trendingProducts = [
   },
   {
     id: "34",
-    slug: "worldwide-goods-polo",
-    name: "Worldwide Goods Polo",
+    slug: "midi-dress-with-gathering",
+    name: "Midi Dress with Gathering",
     price: 64.99,
-    image: "/images/cloths/trending-now/Worldwide-Goods-Polo/image.png",
+    image: "/images/cloths/trending-now/Midi-Dress-with-Gathering/image.png",
     category: "Polo Shirts",
   },
   {
@@ -33,10 +33,10 @@ export const trendingProducts = [
   },
   {
     id: "37",
-    slug: "classic-denim-jeans",
-    name: "Classic Denim Jeans",
+    slug: "polyamide-strappy-bodysuit",
+    name: "Polyamide Strappy Bodysuit",
     price: 89.99,
-    image: "/images/cloths/trending-now/Classic-Denim-Jeans/image.png",
+    image: "/images/cloths/trending-now/Polyamide-Strappy-Bodysuit/image.png",
     category: "Jeans",
   },
   {
