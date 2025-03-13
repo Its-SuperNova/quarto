@@ -1,40 +1,40 @@
-"use client"
+"use client";
 
-import { useEffect, useRef, useState } from "react"
-import Image from "next/image"
-import { useSmoothScroll } from "@/lib/smooth-scroll"
+import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
+import { useSmoothScroll } from "@/lib/smooth-scroll";
 
 export default function HeroSection() {
-  const sectionRef = useRef<HTMLElement>(null)
-  const [offset, setOffset] = useState(0)
+  const sectionRef = useRef<HTMLElement>(null);
+  const [offset, setOffset] = useState(0);
 
   // Initialize Lenis smooth scrolling
-  const lenis = useSmoothScroll()
+  const lenis = useSmoothScroll();
 
   useEffect(() => {
-    const section = sectionRef.current
-    if (!section) return
+    const section = sectionRef.current;
+    if (!section) return;
 
     const handleScroll = () => {
       // Get the distance from the top of the page to the section
-      const rect = section.getBoundingClientRect()
+      const rect = section.getBoundingClientRect();
       // Calculate how far we've scrolled into the section
-      const scrollPosition = rect.top
-      setOffset(scrollPosition)
-    }
+      const scrollPosition = rect.top;
+      setOffset(scrollPosition);
+    };
 
-    window.addEventListener("scroll", handleScroll, { passive: true })
+    window.addEventListener("scroll", handleScroll, { passive: true });
     // Initial calculation
-    handleScroll()
+    handleScroll();
 
     return () => {
-      window.removeEventListener("scroll", handleScroll)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   // Calculate parallax transforms based on scroll position
-  const imageTransform = `translateY(${offset * 0.2}px)` // Image moves slower than scroll
-  const textTransform = `translateY(${offset * 0.4}px)` // Text moves faster than image
+  const imageTransform = `translateY(${offset * 0.2}px)`; // Image moves slower than scroll
+  const textTransform = `translateY(${offset * 0.4}px)`; // Text moves faster than image
 
   return (
     <section
@@ -59,6 +59,7 @@ export default function HeroSection() {
               width: "100%",
               paddingLeft: "0.5em", // Offset for the letter spacing
               fontWeight: 300,
+              fontFamily: "var(--font-ubuntu)",
             }}
           >
             Quarto
@@ -85,5 +86,5 @@ export default function HeroSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

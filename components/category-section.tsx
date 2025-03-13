@@ -22,7 +22,7 @@ export default function CategorySection() {
           <CategoryButton
             name="T-Shirts"
             href="/category/t-shirts"
-            image="/images/categories/t-shirt.png"
+            image="/images/categories/T-shirt.png"
           />
           <CategoryButton
             name="Shorts"
