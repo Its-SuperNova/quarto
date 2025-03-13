@@ -66,38 +66,6 @@ export const allProducts = {
       ],
     },
   },
-  "cmxii-elite-race-hoodie": {
-    id: "22",
-    slug: "cmxii-elite-race-hoodie",
-    name: "CMXII Elite Race Hoodie",
-    price: 79.99,
-    category: "Men Fashion",
-    description:
-      "Premium racing-inspired hoodie with CMXII branding. Designed for comfort and style in any setting.",
-    details:
-      "Loose-fit sweatshirt hoodie in medium weight cotton-blend fabric with a generous, lightly oversized silhouette. Jersey-lined, drawstring hood, dropped shoulders, long sleeves, and a kangaroo pocket. Wide ribbing at cuffs and hem. Soft brushed inside.",
-    fit: "Regular fit. Model is 6'1\" and wears size M.",
-    material: "80% Cotton, 20% Polyester",
-    care: "Machine wash cold with like colors. Tumble dry low. Do not bleach.",
-    images: [
-      "/images/cmxii-hoodie.png",
-      "/images/cmxii-hoodie.png",
-      "/images/cmxii-hoodie.png",
-    ],
-    colors: ["Black", "Navy", "Grey"],
-    sizes: ["S", "M", "L", "XL", "XXL"],
-    reviews: {
-      average: 4.7,
-      count: 156,
-      distribution: [
-        { rating: 5, percentage: 75 },
-        { rating: 4, percentage: 18 },
-        { rating: 3, percentage: 5 },
-        { rating: 2, percentage: 1 },
-        { rating: 1, percentage: 1 },
-      ],
-    },
-  },
   "striped-rugby-shirt": {
     id: "23",
     slug: "striped-rugby-shirt",
@@ -139,16 +107,19 @@ export const allProducts = {
     price: 59.99,
     category: "Men Fashion",
     description:
-      "Comfortable relaxed-fit trousers in olive green. Perfect for casual wear with a modern, laid-back aesthetic.",
+      "Premium relaxed-fit trousers in a versatile olive green shade. Perfect for both casual and smart-casual occasions, featuring a modern silhouette with exceptional comfort.",
     details:
-      "Relaxed-fit trousers in premium cotton blend with comfortable elastic waistband. Features tapered leg opening and side pockets for functionality.",
-    fit: "Relaxed fit. Model is 6'1\" and wears size M.",
-    material: "65% Cotton, 30% Polyester, 5% Elastane",
-    care: "Machine wash cold. Tumble dry low. Iron on low heat if needed.",
+      "Crafted from a premium cotton-blend fabric, these relaxed-fit trousers offer ultimate comfort with their elastic waistband and tapered leg design. The fabric composition ensures durability while maintaining a soft, comfortable feel. Features include side pockets, back pockets, and a subtle tapered leg opening for a contemporary look. The elastic waistband provides a comfortable fit while maintaining a polished appearance.",
+    fit: "Relaxed fit with tapered leg. Model is 6'1\" and wears size M for a comfortable, modern silhouette.",
+    material:
+      "65% Cotton, 30% Polyester, 5% Elastane - Perfect balance of comfort, durability, and stretch",
+    care: "Machine wash cold with similar colors. Tumble dry low. Iron on low heat if needed. Do not bleach.",
     images: [
-      "/images/olive-trousers.png",
-      "/images/olive-trousers.png",
-      "/images/olive-trousers.png",
+      "/images/cloths/new-arrivals/Relaxed-Olive-Trousers/1.png",
+      "/images/cloths/new-arrivals/Relaxed-Olive-Trousers/2.png",
+      "/images/cloths/new-arrivals/Relaxed-Olive-Trousers/3.png",
+      "/images/cloths/new-arrivals/Relaxed-Olive-Trousers/4.png",
+      "/images/cloths/new-arrivals/Relaxed-Olive-Trousers/5.png",
     ],
     colors: ["Olive", "Black", "Navy", "Khaki"],
     sizes: ["S", "M", "L", "XL", "XXL"],
