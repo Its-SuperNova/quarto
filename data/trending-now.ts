@@ -12,7 +12,7 @@ export const trendingProducts = [
     slug: "midi-dress-with-gathering",
     name: "Midi Dress with Gathering",
     price: 64.99,
-    image: "/images/cloths/trending-now/midi-Dress-with-Gathering/image.png",
+    image: "/images/cloths/trending-now/midi-dress-with-gathering/image.png",
     category: "Polo Shirts",
   },
   {
