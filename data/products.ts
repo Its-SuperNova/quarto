@@ -266,6 +266,40 @@ export const allProducts = {
       ],
     },
   },
+  "relaxed-light-wash-jeans": {
+    id: "28",
+    slug: "relaxed-light-wash-jeans",
+    name: "Relaxed Light Wash Jeans",
+    price: 79.99,
+    category: "Men Fashion",
+    description:
+      "Comfortable relaxed-fit jeans in a light wash denim. Perfect for everyday casual wear with a modern, laid-back aesthetic.",
+    details:
+      "Relaxed-fit jeans in premium denim with a light wash finish. Features a comfortable mid-rise waist, straight leg opening, and classic five-pocket styling. The soft, broken-in feel makes these jeans perfect for all-day wear.",
+    fit: "Relaxed fit. Model is 6'1\" and wears size M.",
+    material: "98% Cotton, 2% Elastane",
+    care: "Machine wash cold with similar colors. Tumble dry low. Do not bleach.",
+    images: [
+      "/images/cloths/new-arrivals/Relaxed-Light-Wash-Jeans/1.png",
+      "/images/cloths/new-arrivals/Relaxed-Light-Wash-Jeans/2.png",
+      "/images/cloths/new-arrivals/Relaxed-Light-Wash-Jeans/3.png",
+      "/images/cloths/new-arrivals/Relaxed-Light-Wash-Jeans/4.png",
+      "/images/cloths/new-arrivals/Relaxed-Light-Wash-Jeans/5.png",
+    ],
+    colors: ["Light Wash", "Medium Wash", "Dark Wash"],
+    sizes: ["28", "30", "32", "34", "36", "38"],
+    reviews: {
+      average: 4.7,
+      count: 203,
+      distribution: [
+        { rating: 5, percentage: 75 },
+        { rating: 4, percentage: 18 },
+        { rating: 3, percentage: 4 },
+        { rating: 2, percentage: 2 },
+        { rating: 1, percentage: 1 },
+      ],
+    },
+  },
 };
 
 export const relatedProducts = [
