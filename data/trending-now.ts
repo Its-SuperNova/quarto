@@ -12,7 +12,7 @@ export const trendingProducts = [
     slug: "midi-dress-with-gathering",
     name: "Midi Dress with Gathering",
     price: 64.99,
-    image: "/images/cloths/trending-now/Midi-Dress-with-Gathering/image.png",
+    image: "/images/cloths/trending-now/midi-Dress-with-Gathering/image.png",
     category: "Polo Shirts",
   },
   {
@@ -36,7 +36,7 @@ export const trendingProducts = [
     slug: "polyamide-strappy-bodysuit",
     name: "Polyamide Strappy Bodysuit",
     price: 89.99,
-    image: "/images/cloths/trending-now/Polyamide-Strappy-Bodysuit/image.png",
+    image: "/images/cloths/trending-now/Polyamide-strappy-bodysuit/image.png",
     category: "Jeans",
   },
   {
